@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BMI Calculator - Quick & Easy Body Mass Index Tool</title>
+		<meta
+			name="description"
+			content="Use our free BMI calculator to instantly determine your Body Mass Index. Switch between metric (kg/cm) and imperial (lb/in) units for accurate results."
+		/>
+		<meta
+			name="keywords"
+			content="BMI calculator, body mass index, health tool, weight checker, metric BMI, imperial BMI"
+		/>
+		<link rel="canonical" href="https://bmi-calculator-denislav.vercel.app" />
+
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://bmi-calculator-denislav.vercel.app"
+		/>
+		<meta
+			property="og:title"
+			content="BMI Calculator - Quick & Easy Body Mass Index Tool"
+		/>
+		<meta
+			property="og:description"
+			content="Instantly calculate your BMI with our free tool. Supports both metric and imperial units."
+		/>
+		<meta
+			property="og:image"
+			content="https://i.postimg.cc/KzyLwbm2/image.png"
+		/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:url"
+			content="https://bmi-calculator-denislav.vercel.app"
+		/>
+		<meta
+			name="twitter:title"
+			content="BMI Calculator - Quick & Easy Body Mass Index Tool"
+		/>
+		<meta
+			name="twitter:description"
+			content="Instantly calculate your BMI with our free tool. Supports both metric and imperial units."
+		/>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebApplication",
+				"name": "BMI Calculator",
+				"url": "https://bmi-calculator-denislav.vercel.app",
+				"description": "Free online BMI calculator supporting metric and imperial units to determine your body mass index instantly.",
+				"applicationCategory": "HealthApplication",
+				"operatingSystem": "Web"
+			}
+		</script>
+
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
+		<link rel="preload" href="output.css" as="style" />
+		<link rel="preload" href="script-min.js" as="script" />
+
+		<link
+			rel="preload"
+			href="output.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript><link rel="stylesheet" href="output.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<script src="script-min.js" defer></script>
+	</head>
+	<body>
+		<main
+			class="min-h-screen flex items-center justify-center bg-dark-green font-poppins"
+		>
+			<div class="bg-white p-2 rounded-md relative">
+				<h1 class="text-center font-bold text-[20px]">BMI Calculator</h1>
+				<button
+					class="absolute top-2 right-2 bg-gray text-white px-2 py-1 rounded"
+					id="change-metric-button"
+				>
+					LB
+				</button>
+				<form id="form" class="mt-2 mb-3">
+					<div class="flex justify-between mb-2 gap-2">
+						<label for="weight" id="label-weight" class="font-semibold"
+							>Weight (kg):</label
+						>
+						<input
+							type="number"
+							step="0.10"
+							id="weight"
+							class="border-gray-300 border-[1px] rounded-md outline-0"
+							required
+						/>
+					</div>
+					<div class="flex justify-between mb-3 gap-2">
+						<label for="height" id="label-height" class="font-semibold"
+							>Height (cm):</label
+						>
+						<input
+							type="number"
+							id="height"
+							step="0.10"
+							class="border-gray-300 border-[1px] rounded-md outline-0"
+							required
+						/>
+					</div>
+					<button
+						type="submit"
+						class="bg-green text-white text-center px-5 py-1 rounded-md"
+					>
+						Submit
+					</button>
+					<button
+						type="reset"
+						class="bg-gray text-white text-center px-5 py-1 rounded-md"
+						id="reset-button"
+					>
+						Reset
+					</button>
+				</form>
+				<div id="result" class="hidden">
+					<h2 class="font-semibold text-[20px]">
+						Your BMI is: <span id="bmi-value"></span>
+					</h2>
+					<p>You are <span id="bmi-category" class="font-semibold"></span></p>
+					<div class="mt-4">
+						<div class="flex w-full h-4">
+							<div class="w-1/4 bg-yellow-500 h-2"></div>
+							<div class="w-1/4 bg-green-500 h-2"></div>
+							<div class="w-1/4 bg-red-400 h-2"></div>
+							<div class="w-1/4 bg-red-600 h-2"></div>
+						</div>
+						<div class="flex justify-between text-xs mt-1">
+							<div class="text-center w-1/4">
+								<p>UNDERWEIGHT</p>
+								<p>18.5</p>
+							</div>
+							<div class="text-center w-1/4">
+								<p>NORMAL</p>
+								<p>18.5 - 25</p>
+							</div>
+							<div class="text-center w-1/4">
+								<p>OVERWEIGHT</p>
+								<p>25 - 30</p>
+							</div>
+							<div class="text-center w-1/4">
+								<p>OBESE</p>
+								<p>30</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
