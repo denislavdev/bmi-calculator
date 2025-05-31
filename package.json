@@ -3,7 +3,7 @@
 		"@tailwindcss/cli": "^4.1.6",
 		"concurrently": "^9.1.2",
 		"nodemon": "^3.1.10",
-		"tailwindcss": "^4.1.6",
+		"tailwindcss": "^4.1.7",
 		"uglify-js": "^3.19.3"
 	},
 	"scripts": {
