@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@tailwindcss/cli": "^4.1.7",
+		"@tailwindcss/cli": "^4.1.8",
 		"concurrently": "^9.1.2",
 		"nodemon": "^3.1.10",
 		"tailwindcss": "^4.1.8",
